@@ -9,8 +9,8 @@ int main()
 	HDD hdd("DATADOMAIN", "Future Tech", "1 TB", 540, 20000);
 	laptop lap(cpu, ram, hdd);
 	Mouse mus("Genius", 400, 2, false);
-	lap.Add_mouse(mus);
+	lap.Add_mouse(&mus);
 	Web_cam camera(500, "1920x1080", 60, "auto");
-	lap.Add_web_cam(camera);
+	lap.Add_web_cam(&camera);
 	lap.show();
 }

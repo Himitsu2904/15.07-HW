@@ -4,6 +4,7 @@ using namespace std;
 
 Mouse::Mouse(string _production, double _price, int _Ghz, bool _wired)
 {
+	//production.append(_production);
 	production = _production;
 	price = _price;
 	Ghz = _Ghz;

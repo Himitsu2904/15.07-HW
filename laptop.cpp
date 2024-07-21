@@ -19,15 +19,15 @@ laptop::laptop(CPU& _cpu, RAM& _ram, HDD& _hdd): mouse(nullptr), cam(nullptr) ,m
 	hdd.Set_price(_hdd.Get_price());
 }
 
-void laptop::Add_mouse(Mouse _mouse)
+void laptop::Add_mouse(Mouse* _mouse)
 {
-	mouse = &_mouse;
+	mouse = _mouse;
 	mouse_connect = true;
 }
 
-void laptop::Add_web_cam(Web_cam _cam)
+void laptop::Add_web_cam(Web_cam* _cam)
 {
-	cam = &_cam;
+	cam = _cam;
 	web_cam_connect = true;
 }
 
@@ -78,17 +78,5 @@ void laptop::show()
 	else
 	{
 		cout << "Off" << endl;
-	}
-}
-
-laptop::~laptop()
-{
-	if (mouse != nullptr)
-	{
-		delete mouse;
-	}
-	if (cam != nullptr)
-	{
-		delete cam;
 	}
 }
